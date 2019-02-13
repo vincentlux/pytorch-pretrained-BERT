@@ -59,6 +59,7 @@ class InputFeatures(object):
 def convert_examples_to_features(examples, seq_length, tokenizer):
     """Loads a data file into a list of `InputBatch`s."""
 
+    
     features = []
     for (ex_index, example) in enumerate(examples):
         tokens_a = tokenizer.tokenize(example.text_a)

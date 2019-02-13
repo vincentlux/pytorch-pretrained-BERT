@@ -255,7 +255,7 @@ class BertEmbeddings(nn.Module):
 
         words_embeddings = self.word_embeddings(input_ids)
         position_embeddings = self.position_embeddings(position_ids)
-        token_type_embeddings = self.token_type_embeddings(token_type_ids)
+        token_type_embeddings = self.token_type_embeddings(token_type_ids) # sentence A or B
 
         embeddings = words_embeddings + position_embeddings + token_type_embeddings
         embeddings = self.LayerNorm(embeddings)
